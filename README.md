@@ -46,7 +46,7 @@ npm run lint
 
 # Credits
 Inspired by 
-https://github.com/brocoders/nestjs-boilerplate 
-https://github.com/Saluki/nestjs-template
-https://github.com/prisma/blog-backend-rest-api-nestjs-prisma
-https://github.com/buqiyuan/nest-admin
+- https://github.com/brocoders/nestjs-boilerplate 
+- https://github.com/Saluki/nestjs-template
+- https://github.com/prisma/blog-backend-rest-api-nestjs-prisma
+- https://github.com/buqiyuan/nest-admin
