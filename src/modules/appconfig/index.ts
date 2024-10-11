@@ -1,0 +1,1 @@
+export { AppConfigModule } from './appconfig.module';

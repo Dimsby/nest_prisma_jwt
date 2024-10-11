@@ -1,0 +1,28 @@
+# THIS DOCKERFILE IS INTENDED FOR DEVELOPMENT ENVIRONMENTS
+# DO NOT USE THIS FOR PRODUCTION USAGES.
+
+services:
+  #postgresql:
+  #  image: docker.io/bitnami/postgresql:16
+  #  ports:
+  #    - '5432:5432'
+  #  volumes:
+  #    - 'postgresql_data:/bitnami/postgresql'
+  #  environment:
+  #    - ALLOW_EMPTY_PASSWORD=yes
+  #    - POSTGRESQL_DATABASE=nestjs
+  #    - POSTGRESQL_USERNAME=nestjs
+   #   - POSTGRESQL_PASSWORD=password
+  mariadb:
+    image: mariadb:11
+    #image: mysql:8.1
+    restart: unless-stopped
+    command: '--default-authentication-plugin=mysql_native_password'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=wg-db
+    volumes:
+      - ./docker/db/data:/var/lib/mysql
+      - ./docker/db/sql:/docker-entrypoint-initdb.d
+    ports:
+      - 3310:3306
